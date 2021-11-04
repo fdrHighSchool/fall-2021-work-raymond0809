@@ -42,7 +42,7 @@ public class CoordinatePlane {
 }
 
   public static void area() {
-    Scanner s = new Scanner (System.in);\
+    Scanner s = new Scanner (System.in);
 
     System.out.println("What shape do you want to know the area of?");
     System.out.print("1. Square\n");
@@ -50,7 +50,7 @@ public class CoordinatePlane {
     int choice = s.nextInt();
 
     if (choice == 1) {
-      square():
+      square();
     } //end if statement
 
   } //end area method
@@ -118,8 +118,20 @@ public class CoordinatePlane {
     // distance forumla = |y2 - y1| + |x2 - x1|
     int distance = Math.abs(y2 - y1) + Math.abs(x2 - x1);
 
-    System.out.println("The taxicab distance between the two points is: " + distance); 
+    System.out.println("The taxicab distance between the two points is: " + distance);
 
   }// end taxicabDistance method
+
+
+ public static double slope (int x1, int y1, int x2, int y2) {
+   //formula: (y2-y1) / (x2 -x1)
+   if (x1 != x2) {
+     return (y2 - y1 ) / (x2 - x1);
+   }
+   return 0.0;
+
+ } // end slope emethod
+
+
 
 }// end class
